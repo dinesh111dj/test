@@ -1,0 +1,23 @@
+---
+
+ - hosts: slave1
+   sudo: no
+   name: play1
+   tasks:
+    - name: Install Apache
+      apt: name=vim state=latest
+
+ - hosts: slave1
+   sudo: yes
+   name: play2
+   tasks:
+    - name: Creating new file in slave1 by Dinesh
+      script: samplescript.sh
+
+ - hosts: slave2
+   sudo: no
+   name: play3
+   tasks:
+    - name: Install https server done by DDDDDD
+      apt: name=httpd state=latest
+
