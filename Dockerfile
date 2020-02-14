@@ -1,2 +1,2 @@
 FROM nginx
-ADD ./folder  /var/www/html/nisha
+ADD ./folder.html  /var/www/html/nisha
